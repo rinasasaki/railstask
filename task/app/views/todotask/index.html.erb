@@ -11,22 +11,22 @@
   </div>
   <input type="submit">
 <% end %>
-
 <table class="table">
 
 <tr>
-    <th>タイトル</th><th>内容</th>
+    <th></th><th>タイトル</th><th>内容</th>
     <th colspan="2"></th>
 </tr>
 
 
 <tr>
   <% @todotask.each do |obj| %>
-  <td class= "title"><%= check_box_tag :check%><%= obj['title'] %></td> 
-  <td class= "content"><%= obj['content'] %></td>
+  <td><%= check_box_tag :check%></td>
+  <td><%= obj.title %></td> 
+  <td><%= obj.content %></td>
 </tr>
-</table>
   <% end %>
+  </table>
 
 
 
