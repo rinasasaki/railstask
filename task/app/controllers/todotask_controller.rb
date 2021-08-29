@@ -21,7 +21,10 @@ class TodotaskController < ApplicationController
   end
 
   def update
+    @todotask = Todotask.find(params[:id]) 　#①変数に更新したいレコード情報を代入
+    @todotask.update(todotask_params) 　#②updateメソッドを実行する
   end
+
 
   def delete
     Todotask.find(params[:id]).destroy
