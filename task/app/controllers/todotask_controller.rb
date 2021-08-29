@@ -4,6 +4,12 @@ class TodotaskController < ApplicationController
   end
 
   def new
+    if request.post? then
+      Todotask.create(todotask_params)
+      goback
+    else
+      @todotask = Todotask.new
+    end
   end
 
   def edit
