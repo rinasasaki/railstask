@@ -4,3 +4,7 @@ class TodotaskController < ApplicationController
     @todotask = Todotask.all
   end
 end
+
+def edit
+  @todotask = Todotask.find(params[:id])
+end
