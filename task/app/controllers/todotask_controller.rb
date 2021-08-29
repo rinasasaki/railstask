@@ -34,3 +34,14 @@ class TodotaskController < ApplicationController
     @todotask = Todotask.find(params[:id])
   end
 end
+
+private
+def todotask_params
+  params.require(:todotask).permit(:title, :content)
+end
+
+def goback
+  redirect_to '/todotask'
+end
+
+end
