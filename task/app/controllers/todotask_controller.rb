@@ -25,12 +25,12 @@ class TodotaskController < ApplicationController
     @todotask.update(todotask_params) 　#②updateメソッドを実行する
   end
 
-
   def delete
     Todotask.find(params[:id]).destroy
     goback
   end
 
   def show
+    @todotask = Todotask.find(params[:id])
   end
 end
