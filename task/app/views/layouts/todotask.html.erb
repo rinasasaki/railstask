@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= @title %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <link rel="stylesheet" 
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+</head>
+<body>
+  <body class="container text-body">
+  <h1 class="mb-4 display-4 text-primary">Todolist</h1>
+  <%= yield %>
+  <div class="mt-4 text-center small text-dark border-top border-dark">
+</body>
+</html>
