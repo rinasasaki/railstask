@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'todotask/index'
-  get 'todotask/new'
+  get 'todotask/create'
   get 'todotask/edit'
   get 'todotask/update'
   get 'todotask/delete'
