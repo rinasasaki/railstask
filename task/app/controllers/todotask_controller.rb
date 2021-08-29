@@ -24,6 +24,8 @@ class TodotaskController < ApplicationController
   end
 
   def delete
+    Todotask.find(params[:id]).destroy
+    goback
   end
 
   def show
