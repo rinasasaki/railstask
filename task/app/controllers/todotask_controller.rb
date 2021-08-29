@@ -13,6 +13,11 @@ class TodotaskController < ApplicationController
   end
 
   def edit
+    @todotask = Todotask.find(params[:id])
+    if request.patch? then
+      @todotask.update(todotask_params)
+      goback
+    end
   end
 
   def update
