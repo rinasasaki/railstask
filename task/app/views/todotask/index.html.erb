@@ -11,14 +11,15 @@
   </div>
   <input type="submit">
 <% end %>
-<table class="table">
 
+<table class="table">
 <tr>
   <th>ID</th><th>タイトル</th><th>内容</th>
 </tr>
 
-<tr>   
   <% @todotask.each do |obj| %>
+  
+<tr>   
   <td><%= obj.id %></td>
   <td><%= obj.title %></td> 
   <td><%= obj.content %></td>
