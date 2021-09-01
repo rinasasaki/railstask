@@ -6,20 +6,18 @@ class TodotaskController < ApplicationController
   end
 
 
-def edit
+
   def edit
-    @msg = "edit data.[id = " + params[:id] + "]"
-    @person = Todotask.find(params[:id])
+    @todotask = Todotask.find(params[:id])
   end
   
   
   def update
     obj = Todotask.find(params[:id])
-    obj.update(person_params)
-    redirect_to '/people'
+    obj.update(todotask_params)
+    redirect_to '/todotask'
   end
   
-end
 
 def show 
   @msg = "データ表示"
