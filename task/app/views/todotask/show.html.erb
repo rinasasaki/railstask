@@ -1,2 +1,10 @@
-<h1>Todotask#show</h1>
-<p>Find me in app/views/todotask/show.html.erb</p>
+<p><%= @msg %></p>
+<table class="table">
+  <tr><th>Id</th>
+    <td><%= @data.id %></td></tr>
+  <tr><th>タイトル</th>
+    <td><%= @data.title %></td></tr>
+  <tr><th>内容</th>
+    <td><%= @data.contents %></td></tr>
+  </tr>
+</table>
