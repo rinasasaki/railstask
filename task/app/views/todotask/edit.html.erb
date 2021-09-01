@@ -1,5 +1,4 @@
 <h1 class="display-4 text-primary">Todotask#edit</h1>
-<p><%= @msg %></p>
 
 <%= form_for(@todotask, url:{controller:'todotask', 
     action:'update',id:@todotask.id}) do |form| %>
