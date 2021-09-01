@@ -1,6 +1,5 @@
 class TodotaskController < ApplicationController
 
-  layout 'todotask'
   def index
     @msg = 'データ一覧'
     @todotask = Todotask.all

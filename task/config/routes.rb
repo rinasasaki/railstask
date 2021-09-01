@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/todotask/:id', to: 'todotask#show'
   get 'todotask/index'
   get 'todotask', to: 'todotask#index'
   get 'todotask/create'
@@ -7,6 +8,5 @@ Rails.application.routes.draw do
   get 'todotask/update'
   get 'todotask/delete'
   get 'todotask/show'
-  get 'todotask/:id', to: 'todotask#show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
