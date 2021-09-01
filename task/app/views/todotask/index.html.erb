@@ -17,9 +17,8 @@
   <th>ID</th><th>タイトル</th><th>内容</th>
 </tr>
 
-  <% @todotask.each do |obj| %>
-  
 <tr>   
+  <% @todotask.each do |obj| %>
   <td><%= obj.id %></td>
   <td><%= obj.title %></td> 
   <td><%= obj.content %></td>
