@@ -1,7 +1,7 @@
 <h1 class="display-4 text-primary">People#edit</h1>
 <p><%= @msg %></p>
 <%= form_for(@todotask, url:{controller:'todotask', 
-    action:'edit',id:@todotask.id}) do |form| %>
+    action:'update',id:@todotask.id}) do |form| %>
   <div class="form-group">
     <label for="title">タイトル</label>
     <%= form.text_field :title, class:"form-control" %>
