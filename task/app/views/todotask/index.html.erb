@@ -14,14 +14,12 @@
 <table class="table">
 
 <tr>
-    <th></th><th>タイトル</th><th>内容</th>
-    <th colspan="2"></th>
+  <th>ID</th><th>タイトル</th><th>内容</th>
 </tr>
 
-
-<tr>
+<tr>   
   <% @todotask.each do |obj| %>
-  <td><%= check_box_tag :check%></td>
+  <td><%= obj.id %></td>
   <td><%= obj.title %></td> 
   <td><%= obj.content %></td>
   <td><a href="/todotask/edit/">Edit</a></td>
