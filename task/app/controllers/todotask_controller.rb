@@ -12,5 +12,5 @@ end
 
 def show 
   @msg = "データ表示"
-  @data = Todotask.find(params[:id])
+  @data = Todotask.find (params[:id])
 end
