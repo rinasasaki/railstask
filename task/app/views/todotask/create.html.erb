@@ -1,2 +1,17 @@
 <h1>Todotask#create</h1>
-<p>Find me in app/views/todotask/create.html.erb</p>
+<h1>新規作成</h1>
+<table>
+<%= form_for(@post, url:{controller:'posts',action:'create'}) do |form| %>
+<tr>
+<th>タイトル</th>
+<td><%= form.text_field :title %></td>
+</tr>
+<th>内容</th>
+<td><%= form.text_field :content %></td>
+</tr>
+<th></th>
+<td><%= form.submit '送信' %></td>
+</tr>
+<% end %>
+</table>
+
