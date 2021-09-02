@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   get 'todotask/index'
   get 'todotask', to: 'todotask#index'
+  post 'todotask/index', to: 'todotask#create'
+  patch 'todotask/index', to: 'todotask#create'
   get 'todotask/create'
-  get 'todotask/new'
-  post 'todotask/new', to: 'todotask#create'
+  post 'todotask/create', to: 'todotask#create'
   get 'todotask/edit'
   get 'todotask/update'
   get 'todotask/edit/:id', to: 'todotask#edit'

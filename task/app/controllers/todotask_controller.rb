@@ -12,7 +12,7 @@ class TodotaskController < ApplicationController
   def create
       @todotask = Todotask.new    
       @todotask.save
-      #%redirect_to("/todotask/index")
+      redirect_to("/todotask/index")
   end
       
   

@@ -1,6 +1,6 @@
 <%# todo一覧 %>
 
-  <%=form_tag(controller:'todotask', action:'index') do %>
+  <%=form_tag(controller:'todotask', action:'create') do %>
   <div class="form-group">
     <label for="title">タイトル</label>
     <%= text_field_tag("title","",{class:"form-control"}) %>
