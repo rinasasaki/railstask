@@ -23,6 +23,15 @@ class TodotaskController < ApplicationController
       redirect_to '/todotask'
     end
 
+  def create
+    Todotask.create(post_params)
+    redirect_to '/todotask/index'
+  end
+      
+  def new
+    @post = Todotask.new
+  end
+
   def show 
   @msg = "データ表示"
   @data = Todotask.find(params[:id])

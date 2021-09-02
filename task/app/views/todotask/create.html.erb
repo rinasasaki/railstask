@@ -1,7 +1,7 @@
 <h1>Todotask#create</h1>
 <h1>新規作成</h1>
 <table>
-<%= form_for(@post, url:{controller:'posts',action:'create'}) do |form| %>
+<%= form_for(@post, url:{controller:'todotask',action:'create'}) do |form| %>
 <tr>
 <th>タイトル</th>
 <td><%= form.text_field :title %></td>
