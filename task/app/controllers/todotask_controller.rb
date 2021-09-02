@@ -5,6 +5,17 @@ class TodotaskController < ApplicationController
     @todotask = Todotask.all
   end
 
+  def new
+    @todotask = Todotask.new
+  end
+
+  def create
+      @todotask = Todotask.new    
+      @todotask.save
+      #%redirect_to("/todotask/index")
+  end
+      
+  
   def delete
     obj = Todotask.find(params[:id])
     obj.destroy
@@ -23,25 +34,20 @@ class TodotaskController < ApplicationController
       redirect_to '/todotask'
     end
 
-  def create
-    Todotask.create(post_params)
-    redirect_to '/todotask/index'
-  end
-      
-  def new
-    @post = Todotask.new
-  end
 
   def show 
   @msg = "データ表示"
   @data = Todotask.find(params[:id])
   puts @data
   end
-end
 
 
 
 private
-def todotask_params
-  params.require(:todotask).permit(:title,:content)
+
+
+  def todotask_params
+    params.require(:todotask).permit(:title,:content)
+  end
+
 end
