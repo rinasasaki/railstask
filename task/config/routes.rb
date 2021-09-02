@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'todotask/edit'
   get 'todotask/edit/:id', to: 'todotask#edit'
   post 'todotask/edit/:id', to: 'todotask#update'
+  patch 'todotask/edit/:id', to: 'todotask#update'
   get 'todotask/edit/:id', to:'todotask#edit'
   get 'todotask/update'
   get 'todotask/delete'
