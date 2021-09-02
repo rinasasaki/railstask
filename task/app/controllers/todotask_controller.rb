@@ -17,11 +17,15 @@ class TodotaskController < ApplicationController
     obj.update(todotask_params)
     redirect_to '/todotask'
   end
-  
 
-def show 
+  def show 
   @msg = "データ表示"
   @data = Todotask.find(params[:id])
   puts @data
+  end
 end
+
+private
+def todotask_params
+  params.require(:todotask).permit(:title,:content)
 end
