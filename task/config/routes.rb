@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'todotask/index'
   get 'todotask', to: 'todotask#index'
   get 'todotask/create'
+  get 'todotask/new'
+  post 'todotask/new', to: 'todotask#create'
   get 'todotask/edit'
   get 'todotask/update'
   get 'todotask/edit/:id', to: 'todotask#edit'
