@@ -22,7 +22,8 @@
   <td><%= obj.id %></td>
   <td><%= obj.title %></td> 
   <td><%= obj.content %></td>
-  <td><a href="/todotask/edit/">Edit</a></td>
+  <td><a href="/todotask/edit/<%= obj.id %>">
+    Edit</a>&nbsp;&nbsp;</td>
   <td><a href="javascript:delData(<%= obj.id %>);">
       Delete</a></td>
   </tr>
