@@ -25,6 +25,12 @@ class TodotaskController < ApplicationController
   end
 end
 
+def delete
+  obj = Todotask.find(params[:id])
+  obj.destroy
+  redirect_to '/todotask'
+end
+
 private
 def todotask_params
   params.require(:todotask).permit(:title,:content)
