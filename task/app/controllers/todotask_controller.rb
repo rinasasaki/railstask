@@ -5,7 +5,11 @@ class TodotaskController < ApplicationController
     @todotask = Todotask.all
   end
 
-
+  def delete
+    obj = Todotask.find(params[:id])
+    obj.destroy
+    redirect_to '/todotask'
+  end
 
   def edit
     @todotask = Todotask.find(params[:id])
@@ -25,11 +29,7 @@ class TodotaskController < ApplicationController
   end
 end
 
-def delete
-  obj = Todotask.find(params[:id])
-  obj.destroy
-  redirect_to '/todotask'
-end
+
 
 private
 def todotask_params
